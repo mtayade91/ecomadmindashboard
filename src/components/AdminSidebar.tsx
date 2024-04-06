@@ -3,7 +3,9 @@ import { Link, Location, useLocation, } from "react-router-dom";
 import { AiFillFileText } from "react-icons/ai";
 import { IoIosPeople } from "react-icons/io";
 import { IconType } from "react-icons";
-import { FaChartBar, FaChartLine, FaChartPie } from "react-icons/fa";
+import { FaChartBar, FaChartLine, FaChartPie, FaStopwatch, FaThumbsUp,} from "react-icons/fa";
+import { BiSolidCoupon } from "react-icons/bi";
+import logo from "/assets/Logo.png";
 
 
 const AdminSidebar = () => {
@@ -11,7 +13,7 @@ const location = useLocation();
  
     return (
     <aside>
-        <h2>CodEdge.</h2>
+        <img src={logo} alt="Logo" width="200px"/>
         <DivOne location={location}/>
         <DivTwo location={location}/>
         <DivThree location={location}/>
@@ -43,9 +45,9 @@ const DivThree=({location}:{location:Location})=>(
     <div>
     <h5>Tools</h5>
     <ul>
-        <Li url="/admin/apps/coupon" text="Coupon" Icon={RiDashboardFill} location={location}/>
-        <Li url="/admin/apps/stopwatch" text="Stop Watch" Icon={RiShoppingBag3Fill} location={location}/>
-        <Li url="/admin/apps/toss" text="Toss" Icon={IoIosPeople} location={location}/>
+        <Li url="/admin/apps/coupon" text="Coupon" Icon={BiSolidCoupon} location={location}/>
+        <Li url="/admin/apps/stopwatch" text="Stop Watch" Icon={FaStopwatch} location={location}/>
+        <Li url="/admin/apps/toss" text="Toss" Icon={FaThumbsUp} location={location}/>
     </ul>
 </div>
 )

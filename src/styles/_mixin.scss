@@ -21,7 +21,7 @@
     gap:$gap;
 }
 
-@mixin inputStyles($width:100%, $padding: 1rem, $bgColor:inherit,$border:none){
+@mixin inputStyle($width:100%, $padding: 1rem, $bgColor:inherit,$border:none){
     padding: $padding;
     background-color: $bgColor;
     border:$border;
